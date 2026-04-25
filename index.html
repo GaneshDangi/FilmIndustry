@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday ✨</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;family=Big+Shoulders+Display:wght@400;700;900&amp;family=Alfa+Slab+One&amp;display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="pre-text" id="preText">Happy Birthday Putta</div>
+    <div class="pre-bar">
+      <div id="preBarFill"
+        style="height: 100%; width: 0%; background: linear-gradient(90deg, var(--rose), var(--gold));"></div>
+    </div>
+    <div id="prePercent" class="pre-percent">0%</div>
+  </div>
+
+  <!-- Petals -->
+  <div class="petal-canvas" id="petalCanvas"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-logo">✦ Her Day</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#faq">Q&amp;A</a></li>
+      <li><a href="#wishes">Wishes</a></li>
+      <li><a href="#contact">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section id="hero">
+    <canvas id="fireworkCanvas" style="position: absolute; inset: 0; pointer-events: none; z-index: 0;"></canvas>
+    <div class="hero-top">
+      <div class="hero-party">Birthday Girl</div>
+      <div class="hero-year" id="heroYear">2026</div>
+    </div>
+
+    <div class="hero-center">
+      <div class="hero-21">21</div>
+      <div class="floating-cake-wrapper" id="cakeWrapper">
+        <img src="clean_cake.png" class="floating-cake" id="floatingCake" alt="Birthday Cake">
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <div class="hero-badge">
+        <span>I'm <span id="heroAge">1</span> 🥳</span>
+      </div>
+      <div class="hero-date-new">
+        <span class="month">April</span>
+        <span class="day" id="heroDay">1</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ABOUT ══════════ -->
+  <section id="about" class="">
+
+    <div class="about-grid">
+      <div class="about-img-wrap" data-about-img="">
+        <div class="about-border"></div>
+        <div class="about-frame">
+          <img src="Hero.jpeg" alt="Her Photo"
+            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+        </div>
+        <div class="about-deco"></div>
+        <div class="about-deco2"></div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">About Her</span>
+        <h2>She is <span>Extraordinary</span></h2>
+        <p>A soul that lights up every room she walks into. Her laughter is contagious, her kindness boundless, and her
+          spirit — absolutely radiant.</p>
+        <p>Today we celebrate not just another year, but every smile, every memory, every moment she has made
+          unforgettable for everyone lucky enough to know her.</p>
+        <p>Here's to you — the most wonderful person in the universe.</p>
+        <div class="about-tags" id="aboutTags">
+          <span class="tag">✨ Dreamer</span>
+          <span class="tag">🌸 Kind Soul</span>
+          <span class="tag">💫 Adventurer</span>
+          <span class="tag">🎨 Creative</span>
+          <span class="tag">🌙 Magical</span>
+          <span class="tag">💕 Beloved</span>
+          <span class="tag">🎶 Music Lover</span>
+          <span class="tag">🌺 Radiant</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════ SWIPE GALLERY FULL ══════════ -->
+  <section id="swipeGallery" class="swipe-wrap">
+
+    <section class="slide">
+      <div class="slide__outer">
+        <div class="slide__inner">
+          <div class="slide__content">
+            <div class="slide__container">
+              <h2 class="slide__heading">MOMENTS</h2>
+              <figure class="slide__img-cont">
+                <img class="slide__img" src="Scroller1.jpeg" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide__outer">
+        <div class="slide__inner">
+          <div class="slide__content">
+            <div class="slide__container">
+              <h2 class="slide__heading">TOGETHER</h2>
+              <figure class="slide__img-cont">
+                <img class="slide__img" src="Scroller2.jpeg" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide__outer">
+        <div class="slide__inner">
+          <div class="slide__content">
+            <div class="slide__container">
+              <h2 class="slide__heading">FOREVER</h2>
+              <figure class="slide__img-cont">
+                <img class="slide__img" src="Scroller3.jpeg" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide__outer">
+        <div class="slide__inner">
+          <div class="slide__content">
+            <div class="slide__container">
+              <h2 class="slide__heading">ALWAYS</h2>
+              <figure class="slide__img-cont">
+                <img class="slide__img" src="Scroller4.jpeg" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overlay">
+      <div class="overlay__content">
+        <p class="overlay__count">0<span class="count">1</span></p>
+        <figure class="overlay__img-cont">
+          <img class="image" src="Scroller1.jpeg">
+          <img class="image" src="Scroller2.jpeg">
+          <img class="image" src="Scroller3.jpeg">
+          <img class="image" src="Scroller4.jpeg">
+        </figure>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- ══════════ GALLERY ══════════ -->
+  <section id="gallery" class="">
+
+    <div class="gallery-header">
+      <span class="section-label">Memories</span>
+      <h2>Beautiful Gallery</h2>
+    </div>
+    <div class="gallery-overflow" id="galleryOverflow">
+      <div class="gallery-track" id="galleryTrack">
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Firstmeet.jpeg" alt="First Meeting" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>First Meeting</h3>
+            <p>The day everything changed</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Goldensunset.jpeg" alt="Golden Sunsets" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>Golden Sunsets</h3>
+            <p>Our favourite time of day</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="LastBdy.jpeg" alt="Last Birthday" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>Last Birthday</h3>
+            <p>Sweet memories</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Garden.jpeg" alt="Garden Days" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>Garden Days</h3>
+            <p>Bloom like you always do</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Starrynights.jpeg" alt="Starry Nights" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>Starry Nights</h3>
+            <p>Under a million stars</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Adventures.jpeg" alt="Adventures" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>Adventures</h3>
+            <p>The stories we'll tell forever</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Transforms.jpeg" alt="She Transforms" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>She Transforms</h3>
+            <p>Growing more beautiful every day</p>
+          </div>
+        </div>
+        <!-- Clone for infinite scroll (Full set for seamless loop) -->
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Firstmeet.jpeg" alt="First Meeting" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>First Meeting</h3>
+            <p>The day everything changed</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Goldensunset.jpeg" alt="Golden Sunsets" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>Golden Sunsets</h3>
+            <p>Our favourite time of day</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="LastBdy.jpeg" alt="Last Birthday" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>Last Birthday</h3>
+            <p>Sweet memories</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Garden.jpeg" alt="Garden Days" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>Garden Days</h3>
+            <p>Bloom like you always do</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Starrynights.jpeg" alt="Starry Nights" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>Starry Nights</h3>
+            <p>Under a million stars</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Adventures.jpeg" alt="Adventures" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>Adventures</h3>
+            <p>The stories we'll tell forever</p>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img">
+            <img src="Transforms.jpeg" alt="She Transforms" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-info">
+            <h3>She Transforms</h3>
+            <p>Growing more beautiful every day</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section id="faq" class="">
+
+    <div class="faq-wrap">
+      <div class="faq-header">
+        <span class="section-label">Get to Know Her</span>
+        <h2>Fun Q&amp;A</h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <div class="faq-q">
+            <h3>What is her favourite way to spend a perfect day?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a">
+            <p>A slow morning with coffee, a good book, the right music playing softly — and the people she loves
+              nearby. Nothing more, nothing less. Pure bliss.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <h3>What makes her laugh the most?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a">
+            <p>Silly, unexpected moments. The kind of laughter that comes out of nowhere and leaves you both in tears.
+              She has the most genuine, contagious laugh in the world.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <h3>If she could travel anywhere right now, where would she go?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a">
+            <p>Somewhere with cobblestone streets, old bookshops, warm cafés, and golden hour light that lasts forever.
+              A place made for wandering and dreaming.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <h3>What is her greatest superpower?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a">
+            <p>Making everyone around her feel seen, loved, and important. She has an extraordinary gift for warmth and
+              empathy that few people possess.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            <h3>What does she deserve on her birthday?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a">
+            <p>The whole universe wrapped in a bow. But truly — love, joy, rest, and the certainty that she is deeply,
+              endlessly cherished by everyone around her.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  </section>
+
+  <!-- ══════════ WISHES ══════════ -->
+  <section id="wishes" class="">
+
+    <div class="wishes-glow"></div>
+    <div class="wishes-header">
+      <span class="section-label">With All Our Love</span>
+      <h2>Birthday Wishes</h2>
+    </div>
+    <div class="wish-cards" id="wishCards">
+      <div class="wish-card"><span class="wish-emoji">🌸</span>
+        <h3>May You Bloom</h3>
+        <p>Like the rarest flower, may this year bring you your most breathtaking season of growth, beauty, and joy.</p>
+      </div>
+      <div class="wish-card"><span class="wish-emoji">✨</span>
+        <h3>Shine Brighter</h3>
+        <p>You already outshine every star in the sky. May this birthday remind you just how luminous and extraordinary
+          you truly are.</p>
+      </div>
+      <div class="wish-card"><span class="wish-emoji">🎂</span>
+        <h3>Sweet Moments</h3>
+        <p>May every day ahead be as delicious and wonderful as the sweetest birthday cake — filled with love, laughter,
+          and magic.</p>
+      </div>
+      <div class="wish-card"><span class="wish-emoji">🦋</span>
+        <h3>Fly Free</h3>
+        <p>May this year carry you to new heights, open new doors, and take you to all the beautiful places your heart
+          has ever dreamed of.</p>
+      </div>
+      <div class="wish-card"><span class="wish-emoji">💕</span>
+        <h3>Loved Always</h3>
+        <p>Know that you are surrounded by love deeper than the ocean. Today and every day, you are our greatest
+          treasure.</p>
+      </div>
+      <div class="wish-card"><span class="wish-emoji">🌙</span>
+        <h3>Dream Big</h3>
+        <p>The universe has written the most extraordinary story just for you. This chapter is your most beautiful yet.
+          We believe in you.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <section id="contact" class="">
+
+    <div class="contact-wrap">
+      <span class="section-label">Leave Your Mark</span>
+      <h2>Send Her Your Love</h2>
+      <p>Drop a birthday message, a memory, or just a reminder that she is deeply adored by everyone around her.</p>
+      <div class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-field"><label>Your Name</label><input type="text" placeholder="Who are you?"></div>
+          <div class="form-field"><label>Relation</label><input type="text" placeholder="Friend, Family, Love…"></div>
+        </div>
+        <div class="form-field"><label>Your Birthday Wish</label><textarea
+            placeholder="Write something beautiful for her…"></textarea></div>
+        <button class="btn-send" id="btnSend">Send With Love ✦</button>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>Made with <span class="footer-heart">♥</span> for the most wonderful person in the world</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
